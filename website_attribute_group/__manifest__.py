@@ -3,7 +3,7 @@
 
 {
     'name': 'Website Product Attribute Group',
-    'summary': 'Groups attributes by groups/category. (website attribute group | attribute category)',
+    'summary': 'Groups attributes by groups/category. (website attribute group | attribute category | product attribute category)',
     'description': 'Groups attributes by groups/category',
     'version': '16.0.1.0',
     'category': 'Website',
