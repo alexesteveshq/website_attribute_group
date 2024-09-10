@@ -25,11 +25,11 @@ group/categories for each set of values in a specfic attribute.
 2. Navigate to product attributes: Inventory > Configuration > Attributes. Here you create
 or modify your attribute so it has all the values it needs.
 
-3. Add images and set the group/category for each value created. Optionally you can set
+3. Enable the options "Show images" and "Group values", or one of them depending on your needs.
+
+4. Add images and set the group/category for each value created. Optionally you can set
 one of the values as selected by default so it's the first option selected when the user 
 browses the product in your website.
-
-4. Enable the options "Show images" and "Group values", or one of them depending on your needs.
 
 
 Contact Us
