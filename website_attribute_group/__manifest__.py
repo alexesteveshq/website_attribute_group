@@ -3,10 +3,9 @@
 
 {
     'name': 'Website Product Attribute Group',
-    'summary': 'Groups attributes by groups/category. (website attribute group | attribute category |'
-               ' product attribute category)',
+    'summary': 'Groups attributes by groups/category. (website attribute group | attribute category | product attribute category)',
     'description': 'Groups attributes by groups/category',
-    'version': '17.0.1.0',
+    'version': '15.0.1.0',
     'category': 'Website',
     'author': 'Visionee',
     'license': 'OPL-1',
@@ -16,10 +15,13 @@
     'data': [
         'templates/shop_product.xml',
         'views/product_attribute_value_views.xml',
+        'views/attribute_value_group_views.xml',
+        'data/website_attribute_image_data.xml',
+        'security/ir.model.access.csv',
     ],
     'assets': {
         'web.assets_frontend': [
-            'website_attribute_image/static/src/**/*',
+            'website_attribute_group/static/src/**/*',
         ],
     },
     'images': [
