@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="attribute_value_group_none" model="attribute.value.group">
+        <field name="name">None</field>
+        <field name="is_none" eval="True"/>
+        <field name="image" type="base64" file="website_attribute_image/static/src/img/none.png"/>
+    </record>
+</odoo>

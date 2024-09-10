@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo Module: Attribute Categories/Groups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            margin-top: 20px;
+        }
+        p {
+            font-size: 17px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: #ffffff;
+            min-height: 400px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .showcase h1 {
+            font-size: 55px;
+            margin-top: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #35424a;
+            margin-top: 20px; /* Added margin */
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding" style="margin-top: 20px;">
+                <h1 style="font-size: 40px; margin-top: 20px;">Odoo Module: Attribute Categories/Groups</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div class="container">
+            <h1 style="font-size: 40px; margin-top: 20px;">Groups attribute values by groups/categories</h1>
+            <p>Improve your user experience by grouping the values in the attributes.</p>
+        </div>
+    </section>
+
+    <div class="container content">
+        <section id="overview">
+            <h2 style="font-size: 40px; margin-top: 20px;">Overview</h2>
+            <p>This Odoo module allows users to group and add images to attribute values, making your product listings more visually appealing and informative.</p>
+            <img src="product_attr_img.png" alt="Overview Image" style="width: 900px;
+                border: 1px solid grey;
+                border-radius: 20px;">
+        </section>
+
+        <section id="features" style="margin-top: 20px;">
+            <h2 style="font-size: 40px; margin-top: 20px;">Features</h2>
+            <ul>
+                <li>Easy integration with Odoo</li>
+                <li>Allows to add images on each attribute value</li>
+                <li>Create multiple categories to group as many values as you need</li>
+                <li>Responsive design for optimal viewing on all devices</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2 style="font-size: 40px; margin-top: 20px;">Usage</h2>
+            <ol>
+                <li>After installation, navigate to Inventory > Configuration > Value groups. Then create your
+                    group/categories for each set of values in a specific attribute. <br/>
+                    <img src="example_1.png" alt="Usage Image" style="width:900px; border:1px solid grey; border-radius:20px; margin: 20px 0"></li>
+                <li>Navigate to product attributes: Inventory > Configuration > Attributes. Here you create
+                    or modify your attribute so it has all the values it needs. Attribute must be a radio type.</li>
+                <li>Add images and set the group/category for each value created. Optionally you can set
+                    one of the values as selected by default so it's the first option selected when the user
+                    browses the product in your website.
+                    <img src="example_2.png" alt="Usage Image" style="width:900px; border:1px solid grey; border-radius:20px; margin: 20px 0"></li>
+                <li>Enable the options "Show images" and "Group values", or one of them depending on your needs.<br/>
+                    <img src="example_3.png" alt="Usage Image" style="width:900px; border:1px solid grey; border-radius:20px; margin: 20px 0"></li>
+            </ol>
+        </section>
+
+        <section id="contactus" style="margin-top: 20px;">
+            <h2 style="font-size: 40px; margin-top: 20px;">Contact Us</h2>
+            <br/>
+            <p>For any information or inconvenient related to our products please contact us to the following email address: </p>
+            <li><a href="mailto:alexesteveshq@gmail.com" target="_top">&nbsp;alexesteveshq@gmail.com
+            </a></li>
+        </section>
+    </div>
+</body>
+</html>

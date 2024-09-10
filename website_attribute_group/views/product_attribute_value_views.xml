@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_attribute_view_form" model="ir.ui.view">
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.product_attribute_view_form" />
+        <field name="arch" type="xml">
+            <field name="visibility" position="after">
+                <field name="show_images"/>
+                <field name="group_values"/>
+            </field>
+            <xpath expr="//page/field[@name='value_ids']/tree/field[@name='name']"
+                position="after">
+                <field name="website_product_detail_image" attrs="{'column_invisible': [('parent.show_images', '=', False)]}"/>
+                <field name="group_id" attrs="{'column_invisible': [('parent.group_values', '=', False)]}"/>
+                <field name="default_selected"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

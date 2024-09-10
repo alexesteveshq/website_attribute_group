@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="variants_image" inherit_id="website_sale.variants">
+        <xpath expr="//div[hasclass('radio_input_value')]" position="inside">
+            <img class="attr_value_img" t-if="ptal.attribute_id.show_images and not variant_values"
+                t-attf-src="/web/image?model=product.attribute.value&amp;field=website_product_detail_image&amp;id=#{ptav.product_attribute_value_id.id}"/>
+        </xpath>
+        <xpath expr="//div[hasclass('radio_input_value')]/../input" position="attributes">
+            <attribute name="t-att-default-selected">'true' if ptav.product_attribute_value_id.default_selected else 'false'</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('form-check')]/../.." position="attributes">
+            <attribute name="t-att-group-value">'none' if ptav.product_attribute_value_id.group_id.is_none else ptav.product_attribute_value_id.group_id.id</attribute>
+            <attribute name="t-att-attribute-id">ptal.attribute_id.id</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('form-check')]/../.." position="attributes">
+            <attribute name="t-att-style">'margin: 0; display: none;' if ptal.attribute_id.group_values and not variant_values else ''</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('form-check')]/../../../.." position="before">
+            <ul t-attf-class="list-inline list-unstyled" t-if="ptal.attribute_id.group_values and not variant_values">
+                <t t-foreach="ptal.product_template_value_ids._only_active().mapped('product_attribute_value_id.group_id')" t-as="group">
+                    <li class="list-inline-item form-group group-value-item" style="margin: 0;" t-att-group-id="'none' if group.is_none else group.id" t-att-attribute-id="ptal.attribute_id.id">
+                        <label class="col-form-label">
+                            <div class="custom-control form-check">
+                                <input type="radio" t-attf-class="custom-control-input form-check-input" t-att-name="'value-groups_' + str(ptal.attribute_id.id)" t-att-checked="group.is_none"/>
+                                <div class="group_value custom-control-label">
+                                    <span t-field="group.name" class="label-title"/>
+                                    <img class="attr_value_img" t-if="ptal.attribute_id.show_images"
+                                        t-attf-src="/web/image?model=attribute.value.group&amp;field=image&amp;id=#{group.id}"/>
+                                </div>
+                            </div>
+                        </label>
+                    </li>
+                </t>
+            </ul>
+            <ul class="group-names" t-att-attribute-id="ptal.attribute_id.id" t-if="not variant_values">
+                <t t-foreach="ptal.product_template_value_ids._only_active().mapped('product_attribute_value_id.group_id')" t-as="group">
+                    <strong class="attribute_name group-value-name" t-if="ptal.attribute_id.group_values" t-att-group-value="group.id" style="display:none;"><t t-esc="group.name"/></strong>
+                </t>
+            </ul>
+        </xpath>
+    </template>
+</odoo>

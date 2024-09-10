@@ -1,0 +1,29 @@
+.custom-control.form-check {
+    display: flex;
+}
+.radio_input_value.form-check-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.group_value.custom-control-label {
+    display: flex;
+    flex-direction: column;
+}
+input.custom-control-input {
+    align-self: flex-start;
+    margin: 5px 20px;
+}
+.attr_value_img {
+    width: 100px;
+}
+.group-value-item{
+    padding-right: 10px;
+}
+.group-value-name{
+    padding-top: 10px;
+}
+.group-names{
+    margin: 0 !important;
+    padding: 0 !important;
+}
