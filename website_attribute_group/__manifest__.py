@@ -23,7 +23,7 @@
         ],
     },
     'images': [
-        'static/description/banner.gif',
+        'static/description/example_2.png',
     ],
     'price': 30,
     'currency': "EUR",
